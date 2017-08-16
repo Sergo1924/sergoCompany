@@ -1,3 +1,7 @@
+package storage;
+
+import model.Resume;
+
 /**
  * Created by sergo on 16.08.2017.
  */
@@ -10,7 +14,7 @@ public class ResumeStorage implements Storage {
     @Override
     public void save(Resume r) {
         if (size == MAX_LENTH) {
-            System.out.println("Storage overflow!");
+            System.out.println("storage.Storage overflow!");
             return;
         }
         if (getIndex(r.getUuid()) < 0) {
