@@ -12,8 +12,6 @@ public class SortedResumeStorage implements  Storage {
     private Resume[] storage = new Resume[MAX_LENTH];
     private int size = 0;
 
-
-
     @Override
     public void save(Resume r) {
         if (size == MAX_LENTH) {
