@@ -13,6 +13,7 @@ public class SortedResumeStorage implements  Storage {
     private int size = 0;
 
 
+
     @Override
     public void save(Resume r) {
         if (size == MAX_LENTH) {
