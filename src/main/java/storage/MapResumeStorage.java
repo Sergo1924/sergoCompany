@@ -2,16 +2,13 @@ package storage;
 
 import model.Resume;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by sergo on 30.08.2017.
  */
-public class MapResumeStorage extends AbstractStorage{
-    private Map<String, Resume> map = new HashMap<>();
+public class MapResumeStorage extends AbstractStorage<Resume>{
+    private Map<String, Resume> map = new TreeMap<>();
 
     @Override
     protected Resume getSearchKey(String uuid) {
@@ -19,27 +16,27 @@ public class MapResumeStorage extends AbstractStorage{
     }
 
     @Override
-    protected void doUpdate(Resume r, Object resume) {
+    protected void doUpdate(Resume r, Resume resume) {
         map.put(r.getUuid(), r);
     }
 
     @Override
-    protected boolean isExist(Object resume) {
+    protected boolean isExist(Resume resume) {
         return resume != null;
     }
 
     @Override
-    protected void doSave(Resume r, Object resume) {
+    protected void doSave(Resume r, Resume resume) {
         map.put(r.getUuid(), r);
     }
 
     @Override
-    protected Resume doGet(Object resume) {
+    protected Resume doGet(Resume resume) {
         return (Resume) resume;
     }
 
     @Override
-    protected void doDelete(Object resume) {
+    protected void doDelete(Resume resume) {
         map.remove(((Resume) resume).getUuid());
     }
 
