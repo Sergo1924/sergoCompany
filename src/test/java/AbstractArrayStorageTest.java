@@ -8,8 +8,8 @@ import storage.Storage;
 /**
  * Created by sergo on 30.08.2017.
  */
-public class AbstractArrayStorageTest extends AbstractStorageTest{
-    protected AbstractArrayStorageTest(Storage storage) {
+public abstract class AbstractArrayStorageTest extends AbstractStorageTest{
+    public AbstractArrayStorageTest(Storage storage) {
         super(storage);
     }
 

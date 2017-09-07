@@ -1,5 +1,6 @@
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
+import storage.AbstractArrayStorage;
 import storage.SortedResumeStorage;
 
 /**
@@ -8,11 +9,13 @@ import storage.SortedResumeStorage;
 @RunWith(Suite.class)
 @Suite.SuiteClasses(
         {
-                ArrayStorageTest.class,
-                SortedResumeStorageTest.class,
                 ListStorageTest.class,
                 MapUuidStorageTest.class,
-                MapResumeStorageTest.class
+                MapResumeStorageTest.class,
+                ResumeStorageTest.class,
+                SortedResumeStorageTest.class
+
+
         })
 public class AllStorageTest {
 
