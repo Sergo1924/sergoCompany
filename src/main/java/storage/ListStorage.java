@@ -2,6 +2,7 @@ package storage;
 
 import model.Resume;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,9 @@ import java.util.List;
  * Created by sergo on 30.08.2017.
  */
 public class ListStorage extends AbstractStorage<Integer> {
+    public ListStorage() throws IOException, InterruptedException {
+    }
+
     private List<Resume> list = new ArrayList<>();
 
     @Override

@@ -2,6 +2,7 @@ package storage;
 
 import model.Resume;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,6 +12,8 @@ import java.util.Map;
  * Created by sergo on 30.08.2017.
  */
 public class MapUuidStorage extends AbstractStorage<String> {
+    public MapUuidStorage() throws IOException, InterruptedException  {
+    }
     private Map<String, Resume> map = new HashMap<>();
 
     @Override

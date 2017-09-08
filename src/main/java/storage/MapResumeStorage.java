@@ -2,12 +2,16 @@ package storage;
 
 import model.Resume;
 
+import java.io.IOException;
 import java.util.*;
 
 /**
  * Created by sergo on 30.08.2017.
  */
 public class MapResumeStorage extends AbstractStorage<Resume>{
+    public MapResumeStorage() throws IOException, InterruptedException {
+    }
+
     private Map<String, Resume> map = new TreeMap<>();
 
     @Override

@@ -2,6 +2,7 @@ package storage;
 
 import model.Resume;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -9,8 +10,9 @@ import java.util.Comparator;
  * Created by sergo on 16.08.2017.
  */
 public class SortedResumeStorage extends AbstractArrayStorage {
-
-  /*
+    public SortedResumeStorage() throws IOException, InterruptedException {
+    }
+    /*
     private static class ResumeComparator implements Comparator<Resume> {
         @Override
         public int compare(Resume o1, Resume o2) {
