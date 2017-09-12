@@ -12,6 +12,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,6 +27,8 @@ import java.time.Month;
  * Created by sergo on 30.08.2017.
  */
 public class AbstractStorageTest {
+    public static final File STORAGE_DIR = new File("C:\\Users\\sergo\\IdeaProjects\\sergoCompany\\src\\main\\resources\\storage");
+
     protected Storage storage;
 
     private static final String UUID_1 = "uuid1";
@@ -96,7 +99,7 @@ public class AbstractStorageTest {
     public void update() throws Exception {
         Resume newResume = new Resume(UUID_1, "New Name");
         storage.update(newResume);
-        assertTrue(newResume == storage.get(UUID_1));
+        assertTrue(newResume.equals(storage.get(UUID_1)));
     }
 
     @Test(expected = NotExistStorageException.class)

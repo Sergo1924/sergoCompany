@@ -16,13 +16,13 @@ import java.util.logging.SimpleFormatter;
  */
 public abstract class AbstractStorage<SK> implements Storage{
     private static final Logger LOG = Logger.getLogger(AbstractStorage.class.getName());
-    FileHandler  fh = new FileHandler("C:\\Users\\sergo\\IdeaProjects\\sergoCompany\\src\\main\\qwerty\\MyLogFile.log");
-    public AbstractStorage() throws IOException,InterruptedException  {
-        LOG.addHandler(fh);
-        SimpleFormatter formatter = new SimpleFormatter();
-        fh.setFormatter(formatter);
-        LOG.info("My first log");
-    }
+//    FileHandler  fh = new FileHandler("C:\\Users\\sergo\\IdeaProjects\\sergoCompany\\src\\main\\qwerty\\MyLogFile.log");
+//    public AbstractStorage() throws IOException,InterruptedException  {
+//        LOG.addHandler(fh);
+//        SimpleFormatter formatter = new SimpleFormatter();
+//        fh.setFormatter(formatter);
+//        LOG.info("My first log");
+//    }
 
     protected abstract SK getSearchKey(String uuid);
 
@@ -37,6 +37,16 @@ public abstract class AbstractStorage<SK> implements Storage{
     protected abstract void doDelete(SK searchKey);
 
     protected abstract List<Resume> doCopyAll();
+
+//    public void log() throws IOException{
+//        fh = new FileHandler("C:\\Users\\sergo\\IdeaProjects\\sergoCompany\\src\\main\\qwerty\\MyLogFile.log");
+//        LOG.addHandler(fh);
+//        SimpleFormatter formatter = new SimpleFormatter();
+//        fh.setFormatter(formatter);
+//        LOG.info("My first log");
+//
+//    }
+
 
     public void update(Resume r) {
         LOG.info("Update " + r);

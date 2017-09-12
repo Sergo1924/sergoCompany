@@ -13,8 +13,8 @@ import java.util.List;
  * Created by sergo on 30.08.2017.
  */
 public abstract class AbstractArrayStorage extends AbstractStorage<Integer> {
-    public AbstractArrayStorage() throws IOException, InterruptedException {
-    }
+//    public AbstractArrayStorage() throws IOException, InterruptedException {
+//    }
 
     public static final int STORAGE_LIMIT = 10000;
 

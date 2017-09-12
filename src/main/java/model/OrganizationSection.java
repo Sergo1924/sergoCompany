@@ -2,6 +2,7 @@ package model;
 
 import sun.swing.SwingUtilities2;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -9,7 +10,8 @@ import java.util.Objects;
 /**
  * Created by sergo on 05.09.2017.
  */
-public class OrganizationSection extends Section {
+public class OrganizationSection extends Section implements Serializable {
+    private static final long serialVersionUID = 1L;
     private final List<Organization> organizations;
 
     public OrganizationSection(Organization... organizations) {

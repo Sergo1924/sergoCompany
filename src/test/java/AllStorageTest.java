@@ -10,10 +10,10 @@ import storage.SortedResumeStorage;
 @Suite.SuiteClasses(
         {
                 ListStorageTest.class,
-               // MapUuidStorageTest.class,
                 MapResumeStorageTest.class,
                 ResumeStorageTest.class,
-                SortedResumeStorageTest.class
+                SortedResumeStorageTest.class,
+                ObjectStreamStorageTest.class,
 
 
         })

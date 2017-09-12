@@ -12,8 +12,8 @@ import java.util.Map;
  * Created by sergo on 30.08.2017.
  */
 public class MapUuidStorage extends AbstractStorage<String> {
-    public MapUuidStorage() throws IOException, InterruptedException  {
-    }
+//    public MapUuidStorage() throws IOException, InterruptedException  {
+//    }
     private Map<String, Resume> map = new HashMap<>();
 
     @Override

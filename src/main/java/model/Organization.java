@@ -1,5 +1,6 @@
 package model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -17,7 +18,8 @@ import static util.DateUtil.of;
 /**
  * Created by sergo on 05.09.2017.
  */
-public class Organization {
+public class Organization implements Serializable {
+    private static final long serialVersionUID = 1L;
     private final Link homePage;
     private List<Position> positions = new ArrayList<>();
 
@@ -53,7 +55,8 @@ public class Organization {
      * gkislin
      * 28.07.2016
      */
-    public static class Position {
+    public static class Position implements Serializable{
+        private static final long serialVersionUID = 1L;
         private final LocalDate startDate;
         private final LocalDate endDate;
         private final String title;

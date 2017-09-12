@@ -13,6 +13,13 @@ public class ListStorage extends AbstractStorage<Integer> {
     public ListStorage() throws IOException, InterruptedException {
     }
 
+
+
+//    @Override
+//    public void log() throws IOException {
+//        super.log();
+//    }
+
     private List<Resume> list = new ArrayList<>();
 
     @Override

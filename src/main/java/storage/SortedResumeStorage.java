@@ -10,8 +10,8 @@ import java.util.Comparator;
  * Created by sergo on 16.08.2017.
  */
 public class SortedResumeStorage extends AbstractArrayStorage {
-    public SortedResumeStorage() throws IOException, InterruptedException {
-    }
+//    public SortedResumeStorage() throws IOException, InterruptedException {
+//    }
     /*
     private static class ResumeComparator implements Comparator<Resume> {
         @Override
