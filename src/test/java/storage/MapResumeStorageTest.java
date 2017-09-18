@@ -1,4 +1,4 @@
-import storage.MapResumeStorage;
+package storage;
 
 import java.io.IOException;
 

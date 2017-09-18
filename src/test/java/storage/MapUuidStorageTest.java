@@ -1,4 +1,4 @@
-import storage.MapUuidStorage;
+package storage;
 
 import java.io.IOException;
 

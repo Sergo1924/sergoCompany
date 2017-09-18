@@ -1,4 +1,4 @@
-import storage.ListStorage;
+package storage;
 
 import java.io.IOException;
 

@@ -1,3 +1,5 @@
+package storage;
+
 import exception.ExistStorageException;
 import exception.NotExistStorageException;
 import exception.StorageException;
@@ -27,7 +29,7 @@ import java.time.Month;
  * Created by sergo on 30.08.2017.
  */
 public class AbstractStorageTest {
-    public static final File STORAGE_DIR = new File("C:\\Users\\sergo\\IdeaProjects\\sergoCompany\\src\\main\\resources\\storage");
+    protected static final File STORAGE_DIR = new File("C:\\Users\\sergo\\IdeaProjects\\sergoCompany\\src\\main\\resources\\storage");
 
     protected Storage storage;
 

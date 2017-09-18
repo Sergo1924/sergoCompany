@@ -1,4 +1,4 @@
-import storage.SortedResumeStorage;
+package storage;
 
 import java.io.IOException;
 
