@@ -1,13 +1,19 @@
 package model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import java.util.Objects;
 
 /**
  * Created by sergo on 05.09.2017.
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 public class TextSection extends Section{
     private static final long serialVersionUID = 1L;
-    private final String content;
+    private String content;
+
+    public TextSection() {
+    }
 
     public TextSection(String content) {
         Objects.requireNonNull(content, "content must not be null");

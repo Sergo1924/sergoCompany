@@ -1,5 +1,7 @@
 package model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -7,9 +9,13 @@ import java.util.Objects;
 /**
  * Created by sergo on 05.09.2017.
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ListSection  extends Section{
     private static final long serialVersionUID = 1L;
-    private final List<String> items;
+    private List<String> items;
+
+    public ListSection() {
+    }
 
     public ListSection(String... items) {
         this(Arrays.asList(items));
