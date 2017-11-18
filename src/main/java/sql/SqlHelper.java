@@ -8,6 +8,7 @@ import java.sql.SQLException;
  * Created by sergo on 23.10.2017.
  */
 public class SqlHelper {
+
     private final ConnectionFactory connectionFactory;
 
     public SqlHelper(ConnectionFactory connectionFactory) {
@@ -16,6 +17,7 @@ public class SqlHelper {
 
     public void execute(String sql){
         execute(sql, PreparedStatement::execute);
+      //  execute(sql,(PreparedStatement st)->st.execute());
     }
     public <T> T execute(String sql, SqlExecutor<T> executor){
         try(Connection conn = connectionFactory.getConnection(); PreparedStatement ps = conn.prepareStatement(sql)){
